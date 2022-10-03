@@ -1,0 +1,28 @@
+@import '../../global/variable';
+@import '../mixin/mixins';
+
+footer {
+    @include global;
+    background-color: $color-nav;
+    margin: $size-20px 0 0 0;
+
+    .footer {
+        width: 32%;
+    }
+}
+
+// ---------------- Screen ----------------- //
+
+@media (max-width:360px) {
+    footer {  
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        background-color: $color-nav;
+        margin: $size-20px 0 0 0;
+        .footer {
+            width: 90%;
+        }
+    }
+}

@@ -1,0 +1,90 @@
+@import '../../global/variable';
+@import '../mixin/mixins';
+
+.body {
+    margin: auto;
+    background: gainsboro;
+    font-family: sans-serif;
+}
+
+.login {
+    @include center ;
+    align-items: center;
+    flex-direction: column;
+}
+
+.h1 {
+    color: #1F5B9A;
+}
+
+.image {
+    display: flex;
+}
+
+.input {
+    @include flex-direction ;
+    margin: $size-15px;
+}
+
+label {
+    padding: $size-5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    padding: $size-13px;
+    background: $color-nav;
+    border: none;
+    outline: none;
+}
+
+form {
+    @include flex-direction ;
+    width: 50%;
+    margin: 8% auto;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background: $color-White;
+    border-radius: $size-10px;
+}
+
+.button {
+    display: flex;
+    padding: $size-5px;
+    margin: $size-15px;
+
+    a {
+        text-decoration: none;
+        color: $color-White ;
+    }
+}
+
+button {
+    padding: $size-10px;
+    width: 25%;
+    background: $button-right;
+    border: none;
+    color: $color-White;
+    border-radius: $size-10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.input-labal {
+    margin: $size-15px;
+}
+
+
+@media (max-width:360px){
+    form{
+        width: 99%;
+        margin: 5% auto;
+        .input-labal{
+            label{
+                font-size: 10px;
+            }
+        }
+        .button{
+            font-size:10px;
+        }
+    }
+
+}

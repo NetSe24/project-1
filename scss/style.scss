@@ -1,0 +1,24 @@
+@import '../global/nav';
+
+@import '../global/main';
+
+@import './jobs-catagory/jobs-position';
+
+@import './featured-employee/feature';
+
+@import '../scss/footer/footer' ;
+
+@import '../scss/mixin/mixins' ;
+
+body{
+    @include padding-and-margin ;
+    font-family: sans-serif;
+}
+
+#home{
+    border-bottom: 1px solid black;
+}
+
+
+
+

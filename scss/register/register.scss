@@ -1,0 +1,161 @@
+@import '../../global/variable';
+@import '../mixin/mixins';
+
+body {
+    input {
+        outline: none;
+        background-color: $color-nav;
+        border: none;
+    }
+
+    background-color: $color-nav;
+    font-family: sans-serif;
+}
+
+.form {
+    height: $height;
+    @include center;
+    align-items: center;
+
+    &-register {
+        justify-content: center;
+        width: 40%;
+        height: 60vh;
+        background-color: $color-White;
+        border-radius: $size-10px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+
+        .register-h1 {
+            @include center;
+        }
+
+        .first-last-name {
+            display: flex;
+            justify-content: space-evenly;
+
+            .first-name,
+            .last-name {
+                input {
+                    width: 210px;
+                    padding: $size-10px;
+                }
+
+                padding: 0 0 $size-10px 0;
+            }
+        }
+
+        .email,
+        .password,
+        .re-password {
+            @include center;
+            width: $width;
+
+            input {
+                width: 470px;
+                padding: $size-10px;
+            }
+
+            padding: $size-10px 0 0 0;
+        }
+
+        .button {
+            @include space-between;
+            padding: $size-10px $size-20px 8px $size-20px;
+
+            &-cancel,
+            &-register {
+                button {
+                    padding: 8px;
+                    border: none;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $color-White;
+                }
+            }
+
+            &-cancel {
+                button {
+                    background-color: $button-left;
+
+                }
+            }
+
+            &-register {
+                button {
+                    background-color: $button-right;
+
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width:768px) {
+   
+
+    .form-register {
+        height: 50vh;
+        .first-last-name {
+
+            .first-name,
+            .last-name {
+                input {
+                    width: 100px;
+                    padding: $size-10px;
+                }
+    
+                padding: 0 0 $size-10px 0;
+            }
+        }
+        .email,
+        .password,
+        .re-password {
+            @include center;
+            width: $width;
+
+            input {
+                width: 250px;
+                padding: $size-10px;
+            }
+
+            padding: $size-10px 0 0 0;
+        }
+    }
+
+}
+@media (max-width:360px) {
+    .form-register {
+        width: 70%;
+        height: 55vh;
+        .first-last-name {
+
+            .first-name,
+            .last-name {
+                input {
+                    width: 80px;
+                    padding: $size-10px;
+                }
+    
+                padding: 0 0 $size-10px 0;
+            }
+        }
+        .email,
+        .password,
+        .re-password {
+            @include center;
+            width: $width;
+
+            input {
+                width: 200px;
+                padding: $size-10px;
+            }
+
+            padding: $size-10px 0 0 0;
+        }
+    }
+
+}

@@ -1,0 +1,48 @@
+@import "../../global/variable";
+@import '../mixin/mixins';
+
+.selected-position {
+    h1 {
+        @include center;
+    }
+}
+
+.job-discrition {
+    @include global;
+    background: $color-nav;
+    padding: 10px;
+}
+
+.job-category,
+.location,
+.salary {
+    width: 32%;
+    border-radius: $size-5px;
+
+    h3 {
+        padding-left: 25px;
+    }
+
+    ul {
+        line-height: 30px;
+    }
+}
+
+//=====================//Screen 360 //===========
+
+@media (max-width:360px) {
+    
+    .job-discrition {
+        display: flex;
+        flex-direction: column;
+    }
+    .job-category,
+    .location,
+    .salary {
+        width:100%;
+    }
+    .feature{
+        font-size:20px;
+    }
+
+}

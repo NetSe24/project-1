@@ -1,0 +1,204 @@
+@import '../../global/variable';
+
+@import '../../global/nav';
+
+@import '../../global/main';
+
+@import '../mixin/mixins';
+
+@import '../footer/footer';
+
+body {
+    font-family: sans-serif;
+    @include padding-and-margin;
+}
+
+.main-title {
+    h1 {
+        color: white;
+    }
+
+    p {
+        color: $button-left;
+    }
+}
+.main-title-h1:hover {
+    color: red;
+}
+.main-center {
+    @include center;
+    background: $button-right;
+    padding: $size-10px;
+    height: 20vh;
+    align-items: center;
+    color: $color-White;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.select {
+    @include flex-direction;
+    padding: $size-10px;
+    flex-wrap: wrap;
+}
+
+select {
+    padding: $size-10px;
+    width: $width;
+}
+
+h2 {
+    @include center;
+}
+
+.position {
+    @include flex-direction;
+    padding: $size-30px;
+    gap: $size-10px;
+    width: 65%;
+
+}
+
+.card {
+    @include flex-direction;
+    background: #76b3e8;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: $size-5px;
+}
+
+.card-time {
+    display: flex;
+    width: $width;
+    margin: -10px;
+}
+
+.sidebar-left {
+    @include flex-direction;
+    height: 70vh;
+    background: $color-White ;
+    width: 35%;
+    padding: $size-10px;
+    gap: $size-5px;
+    margin-top: $size-30px;
+    margin-left: $size-30px;
+    border-radius: $size-10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card-content {
+    @include space-between;
+    align-items: center;
+    padding: $size-20px;
+}
+
+.full-time {
+    @include flex-direction;
+    padding: $size-20px;
+    margin-top: -50px;
+}
+
+.part-time {
+
+    display: flex;
+    background: $color-White;
+    border-bottom: 1px solid #000000;
+    padding: $size-5px;
+
+}
+
+.full-time span {
+    color: red;
+}
+
+.color {
+    color: red;
+}
+
+.card-right {
+    padding: $size-10px;
+}
+
+button {
+    background: $button-right;
+    color: $color-White;
+    padding: $size-5px;
+    border: none;
+    border-radius: $size-5px;
+    width: $width;
+}
+
+.card-time {
+    display: flex;
+
+}
+
+.image {
+    display: flex;
+    align-items: center;
+}
+
+.card-left img {
+    border: 1px solid gray;
+}
+
+.red {
+    color: red;
+}
+
+.card-left p {
+    font-size: 20px;
+}
+
+#jobs {
+    border-bottom: 1px solid black;
+}
+
+
+
+@media (max-width: 360px) {
+    .card-time{
+        @include flex-direction;
+        margin: 5px;
+        padding: 2px;
+    }
+    .sidebar-left{
+        width: 80%;
+        padding: 2px;
+        height: 45vh;
+    }
+    .position{
+        display: flex;
+        width: 85%;
+        overflow: scroll;
+        height: 30vh;
+    }
+    .part-time{
+        height: 5vh;
+    }
+    .card-right{
+        font-size: 12px;
+        button{
+            font-size: 8px;
+        }
+    }
+    .card-left{
+        font-size: 10px;
+        p{
+            font-size: 10px;
+        }
+        
+    }
+    .full-time{
+        span{
+            font-size: 10px;
+        }
+    }
+    .main-title{
+        h1{
+            font-size: 15px;
+        }
+        p{
+            font-size: 8px;
+        }
+    }
+    
+}

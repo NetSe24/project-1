@@ -1,0 +1,133 @@
+@import '../../global/nav';
+@import '../../global/variable';
+@import '../footer/footer';
+@import '../mixin/mixins' ;
+
+body{
+    font-family: sans-serif;
+}
+.container {
+    background-image: url(../../img/opport-bg.webp);
+    background-repeat: none;
+    background-size: cover;
+    height: 50vh;
+    width: $width;
+
+    .opportunity-h1 {
+        display: flex;
+        align-items: center;
+        height: 50vh;
+
+        h1 {
+            align-items: center;
+            padding-left: 10%;
+            font-size: 70px;
+            color: $button-right;
+        }
+
+        h1:hover {
+            color: red;
+        }
+    }
+}
+
+.choose-position-title {
+    h1 {
+        @include center ;
+        color: $button-right;
+    }
+
+    h1:hover {
+        color: red;
+    }
+}
+
+.card {
+    @include space-between;
+    margin: 1%;
+    
+    table,
+    th,
+    td {
+        border: 1px solid $color-nav;
+        border-collapse: collapse;
+        padding: $size-10px;
+
+    }
+
+    table {
+        width: 100%;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+        background: $color-White ;
+    }
+
+    th:hover {
+        background: $button-left;
+        color: $color-White;
+
+    }
+
+    td:hover {
+        background: $button-right;
+        color: $color-White;
+    }
+
+    &-detail-1,
+    &-detail-2 {
+        width: 49%;
+        background: $color-nav;
+        padding: 1%;
+        border-radius: $size-5px;
+        p{
+            line-height: 30px;
+        }
+    }
+
+    &-detail-1 {
+        margin-right:$size-5px;
+    }
+
+    &-detail-2 {
+        margin-left: $size-5px;
+    }
+}
+.table{
+    overflow: scroll;
+    height: 30vh;
+}
+#oppo{
+    border-bottom: 1px solid black;
+}
+
+@media (max-width: 360px) {
+    .container{
+        height: 30vh;
+        display: flex;
+        .opportunity-h1{
+            display: flex;
+            align-items: center;
+            h1{
+                font-size: 40px;
+                margin-top: -80px;
+            }
+        }
+    }
+    .choose-position-title{
+        h1{
+            font-size: 20px;
+        }
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 200%;
+    }
+    table{
+        width: 70%;
+        margin: 5px;
+        tr{
+            height: 10%;
+            font-size: 12px;
+        }
+    }
+}

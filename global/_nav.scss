@@ -1,0 +1,213 @@
+@import'./variable';
+@import '../scss/mixin/mixins';
+
+body {
+    @include padding-and-margin;
+}
+
+nav {
+    @include global;
+    align-items: center;
+    @include padding-and-margin;
+    background: $color-nav;
+    position: sticky;
+    top: 0;
+
+    .nav-left {
+        font-size: $size-15px;
+        color: $button-left;
+
+        h1 {
+            span {
+                color: $button-right ;
+                font-size: 40px;
+            }
+        }
+
+    }
+
+    .nav-center {
+        ul {
+            display: flex;
+            gap: 50px;
+
+            li {
+                list-style-type: none;
+
+                a {
+                    text-decoration: none;
+                    color: #000000;
+
+                }
+            }
+        }
+
+        a:hover {
+            cursor: pointer;
+            color: $button-left;
+            border-bottom: 2px solid $button-right;
+        }
+    }
+
+    .nav-right {
+        .nav-button {
+            display: flex;
+
+            .button {
+                border: none;
+                padding: 12px;
+
+                a {
+                    text-decoration: none;
+                    color: $color-White;
+                    font-size: $size-15px;
+                }
+            }
+
+            .button-left {
+                background-color: $button-left;
+                border-radius: $size-5px 0 0 $size-5px ;
+            }
+
+            .button-right {
+                background-color: $button-right;
+                border-radius: 0 $size-5px $size-5px 0;
+            }
+        }
+    }
+
+}
+
+//\\_________________768 & 1024_____________//\\ Navbar-responsive //\\__________________________________________
+
+@media (max-width:768px) {
+    nav {
+        height: 8vh;
+        display: flex;
+        justify-content: space-around;
+        @include padding-and-margin;
+        align-items: center;
+        background: $color-nav;
+        position: sticky;
+        top: 0;
+
+        .nav-left {
+            font-size: $size-15px;
+            color: $button-left;
+           h1 {
+                font-size: 20px;
+                span {
+                    color: $button-right ;
+                    font-size: 25px;
+                }
+            }
+        }
+        .nav-center{
+            ul {
+                display: flex;
+                gap: 15px;
+                li {
+                    list-style-type: none;
+                    a {
+                        text-decoration: none;
+                        font-size: 15px;
+                        color: #000000;
+                    }
+                    // #about{
+                    //     display: none;
+                    // }
+                }
+            }
+        }
+        .nav-right {
+            .nav-button {
+                display: flex;
+                .button {
+                    border: none;
+                    padding: 5px;
+    
+                    a {
+                        text-decoration: none;
+                        color: $color-White;
+                        font-size: $size-10px;
+                    }
+                }
+                .button-left {
+                    background-color: $button-left;
+                    border-radius: $size-5px 0 0 $size-5px ;
+                }
+                .button-right {
+                    background-color: $button-right;
+                    border-radius: 0 $size-5px $size-5px 0;
+                }
+            }
+        }
+    }
+}
+
+// ------------//  screen 390px Mi 12  //---------
+
+@media (max-width:360px) {
+    nav {
+        height: 6vh;
+        display: flex;
+        justify-content: space-around;
+        @include padding-and-margin;
+        align-items: center;
+        background: $color-nav;
+        position: sticky;
+        top: 0;
+
+        .nav-left {
+            font-size: $size-15px;
+            color: $button-left;
+           h1 {
+                font-size: 10px;
+                span {
+                    color: $button-right ;
+                    font-size: 15px;
+                }
+            }
+        }
+        .nav-center{
+            ul {
+                display: flex;
+                gap: 8px;
+                li {
+                    list-style-type: none;
+                    a {
+                        text-decoration: none;
+                        font-size: 8px;
+                        color: #000000;
+                    }
+                    #about{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .nav-right {
+            .nav-button {
+                display: flex;
+                .button {
+                    border: none;
+                    padding: 5px;
+    
+                    a {
+                        text-decoration: none;
+                        color: $color-White;
+                        font-size: $size-10px;
+                    }
+                }
+                .button-left {
+                    background-color: $button-left;
+                    border-radius: $size-5px 0 0 $size-5px ;
+                }
+                .button-right {
+                    background-color: $button-right;
+                    border-radius: 0 $size-5px $size-5px 0;
+                }
+            }
+        }
+    }
+}
